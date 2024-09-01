@@ -1,0 +1,57 @@
+1. http://localhost:8080/auth/signup
+   
+Body > raw
+{
+    "email":"abc@gmail.com",
+    "password":"abcdef",
+    "fullName":"abc def"
+}
+
+2. http://localhost:8080/auth/login
+
+Body > raw
+{
+    "email":"abc@gmail.com",
+    "password":"abcdef"
+}
+
+ResponseBody / output
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNAZ21haWwuY29tIiwiaWF0IjoxNzI1MTI2OTAwLCJleHAiOjE3MjUxMzA1MDB9.arbdbYFAPUFdI93PZQuHX4dpYhHmFlcqbAa_u5cj8Wk",
+    "expiresIn": 3600000
+}
+
+3. http://localhost:8080/Shipping/India/AddCity 
+{
+    "cityCode": 1,
+    "cityName": "OldBerhampur",
+    "cityPinCode": 760009
+  }
+
+ResponseBody / output
+City added successfully
+
+4.http://localhost:8080/Shipping/India/cities?pageSize=2&pageNum=0&sortBy=cityName
+
+5.http://localhost:8080/Shipping/India/UpdateCity
+{
+    "cityCode": 1,
+    "cityName": "Patia",
+    "cityPinCode": 751024a
+  }
+
+ResponseBody / output
+City updated successfully
+
+6.http://localhost:8080/Shipping/India/RemoveCity/1
+
+ResponseBody / output
+City Deleted successfully
+
+7.http://localhost:8080/Shipping/India/message
+
+8.http://localhost:8080/Shipping/India/CityDetails
+
+9. http://localhost:8080/Shipping/India/city/1
+
+10.http://localhost:8080/Shipping/India/citiesName?pageSize=2&pageNum=0
